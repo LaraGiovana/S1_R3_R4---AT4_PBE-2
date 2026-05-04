@@ -1,0 +1,355 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: S1_R3_R4
+meta:
+  id: wrk_520c55ccb4f243598ee92aec7ed26502
+  created: 1774888204328
+  modified: 1774888204328
+  description: ""
+collection:
+  - name: produtos
+    meta:
+      id: fld_f44a63bff5d64e29bdaa9f4da5e5814d
+      created: 1775473611169
+      modified: 1775473611169
+      sortKey: -1775473611170
+      description: ""
+    children:
+      - url: localhost:8080/produtos
+        name: insert - produtos
+        meta:
+          id: req_936e4c7c1ccf4b31af708f6a5965cdf8
+          created: 1775473014500
+          modified: 1775475447141
+          isPrivate: false
+          description: ""
+          sortKey: -1775473622963
+        method: POST
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "2"
+              description: ""
+              disabled: false
+            - name: nome
+              value: gloss
+              description: ""
+              disabled: false
+            - name: valor
+              value: "100"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\48836790801\OneDrive - SESISENAISP -
+                Escolas\Imagens\download.jpg
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/produtos
+        name: select - produtos
+        meta:
+          id: req_0f1e3f56e1764a80b2bb2b82a584639b
+          created: 1775475950731
+          modified: 1775475956192
+          isPrivate: false
+          description: ""
+          sortKey: -1773970657988.5
+        method: GET
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "2"
+              description: ""
+              disabled: false
+            - name: nome
+              value: gloss
+              description: ""
+              disabled: false
+            - name: valor
+              value: "100"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\48836790801\OneDrive - SESISENAISP -
+                Escolas\Imagens\download.jpg
+              type: file
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/produtos
+        name: atualizar - produtos
+        meta:
+          id: req_76b525477a7a4322b8bfbd8dfbda350d
+          created: 1775476025261
+          modified: 1775476213797
+          isPrivate: false
+          description: ""
+          sortKey: -1773219175501.25
+        method: PUT
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "2"
+              description: ""
+              disabled: false
+            - name: nome
+              value: gloss
+              description: ""
+              disabled: false
+            - name: valor
+              value: "89"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\48836790801\OneDrive - SESISENAISP -
+                Escolas\Imagens\download.jpg
+              type: file
+        parameters:
+          - name: id
+            value: "2"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/produtos/1
+        name: delet - produtos
+        meta:
+          id: req_57465900d0f04820a49111aee8005bb5
+          created: 1775476173451
+          modified: 1775476188889
+          isPrivate: false
+          description: ""
+          sortKey: -1772843434257.625
+        method: DELETE
+        body:
+          mimeType: multipart/form-data
+          params:
+            - name: idCategoria
+              value: "2"
+              description: ""
+              disabled: false
+            - name: nome
+              value: gloss
+              description: ""
+              disabled: false
+            - name: valor
+              value: "89"
+              description: ""
+              disabled: false
+            - name: image
+              value: ""
+              description: ""
+              disabled: false
+              fileName: C:\Users\48836790801\OneDrive - SESISENAISP -
+                Escolas\Imagens\download.jpg
+              type: file
+        parameters:
+          - name: id
+            value: "1"
+            description: ""
+            disabled: false
+        headers:
+          - name: Content-Type
+            value: multipart/form-data
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: categoria
+    meta:
+      id: fld_d8f67a68ef724522b6ae717bc7577032
+      created: 1775473651284
+      modified: 1775473651284
+      sortKey: -1775473651284
+      description: ""
+    children:
+      - url: localhost:8080/categorias
+        name: select
+        meta:
+          id: req_2e3bdad531bf495f9395f874d1204ac6
+          created: 1774888212481
+          modified: 1775473665520
+          isPrivate: false
+          description: ""
+          sortKey: -1775473665477
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias
+        name: insert
+        meta:
+          id: req_ecc9650777fd456d9abbfa3be24c61be
+          created: 1774892069345
+          modified: 1775473674648
+          isPrivate: false
+          description: ""
+          sortKey: -1775473665577
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "cosmeticos",
+            	"descricao" : "batom"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias/1
+        name: delete
+        meta:
+          id: req_460a0c8e300d4918a729ef1676ec1166
+          created: 1774895054675
+          modified: 1775473679134
+          isPrivate: false
+          description: ""
+          sortKey: -1775473665777
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "cosmeticos",
+            	"descricao" : "blush"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: localhost:8080/categorias
+        name: atualizar
+        meta:
+          id: req_2f4fc9702cf94164a65396beda3de3f8
+          created: 1774895176113
+          modified: 1775473676968
+          isPrivate: false
+          description: ""
+          sortKey: -1775473665677
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "cosmeticos",
+            	"descricao" : "blush"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.3.1
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_1038eeb96c80c63cf88d2882899b607633731a9a
+    created: 1774888204397
+    modified: 1774888204397
+environments:
+  name: Base Environment
+  meta:
+    id: env_1038eeb96c80c63cf88d2882899b607633731a9a
+    created: 1774888204340
+    modified: 1774888204340
+    isPrivate: false
