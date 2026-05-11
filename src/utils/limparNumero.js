@@ -1,3 +1,4 @@
-    export function limparNumero(valor){
-        return valor.replace(/\D/g, '');
-    }
+export function limparNumero(valor) {
+    if (!valor) return '';
+    return String(valor).replace(/\D/g, '');
+}

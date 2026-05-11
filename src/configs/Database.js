@@ -1,34 +1,33 @@
 import mysql from 'mysql2/promise';
 import 'dotenv/config';
 
-//Padrão de projeto utilizado na classe de conexão com banco de dados: SINGLETON
+//Padrão de projeto utilizado na classe de conexão do banco de dados: SINGLETON
 class Database {
     static #instance = null;
     #pool = null;
 
-    #createPool () {
+    #createPool(){
         this.#pool = mysql.createPool({
-            host: process.env.DB_HOST,
-            user: process.env.DB_USER,
-            password: process.env.DB_PASSWORD,
-            port: process.env.DB_PORT,
-            database: process.env.DB_DATABASE,
-            waitForConnections : true,
-            connectionLimit: 100,
-            queueLimit: 0
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE,
+        port: process.env.DB_PORT,
+        waitForConnections: true,
+        connectionLimit: 100,
+        queueLimit: 0
         });
+    
     }
-
-
-    static getInstance() {
+    static getInstance(){
         if(!Database.#instance){
             Database.#instance = new Database();
             Database.#instance.#createPool();
+
         }
         return Database.#instance;
     }
-
-    getPool(){
+    getPool() {
         return this.#pool;
     }
 }

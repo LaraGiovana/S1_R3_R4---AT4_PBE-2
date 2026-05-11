@@ -3,7 +3,7 @@ import clienteController from "../controllers/clienteController.js";
 const clientesRoutes = Router();
 
 clientesRoutes.post('/', clienteController.criar);
-clientesRoutes.put('/', clienteController.editar);
+clientesRoutes.put('/:id', clienteController.editar);
 clientesRoutes.delete('/:id', clienteController.deletar);
 clientesRoutes.get('/', clienteController.selecionar);
 
